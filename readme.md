@@ -40,6 +40,12 @@ libepaper-central is licensed under the MIT License.
 
 ## Changelog
 
+### v0.1.0
+
+* Initial version of the library
+  * Transmit images from generic rgb pixel-arrays
+  * Simple "epaperd" reference-program to load .ppm-images from a folder and transmit them to price-tags
+
 ---
 
 Created by [Lesosoftware](https://github.com/leso-kn) in 2023
