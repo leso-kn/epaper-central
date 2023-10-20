@@ -1,0 +1,12 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: EPaperCentral
+Description: "A lightweight image sender library for ZigBee USB sticks running the cc2531-OEPL OpenEPaperLink station firmware."
+Requires:
+Version: @epaper-central_VERSION@
+Libs: -L${libdir} -lepaper-central @CMAKE_THREAD_LIBS_INIT@
+Cflags: -I${includedir}
+Conflicts:
