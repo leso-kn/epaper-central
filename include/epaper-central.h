@@ -85,4 +85,4 @@ extern void ectr_pixmap_free(struct EctrPixmap *pixmap);
  */
 extern struct EctrPixmap *ectr_pixmap_from_rgb(unsigned char *rgb, unsigned int length, unsigned int w);
 
-#endif // EPAPER_CENTRAL_H
+#endif /// EPAPER_CENTRAL_H  @docs

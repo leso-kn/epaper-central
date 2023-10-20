@@ -64,3 +64,17 @@ install(
 install(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/epaper-central.pc
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+
+add_custom_target(doc_doxygen ALL
+    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    VERBATIM)
+
+install(
+    DIRECTORY docs/man
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/share)
+
+endif (DOXYGEN_FOUND)

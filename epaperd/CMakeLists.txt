@@ -6,7 +6,7 @@
 #
 
 add_executable(epaperd
-    main.c
+    epaperd.c
     util.c)
 
 target_link_libraries(epaperd PRIVATE
