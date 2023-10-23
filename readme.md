@@ -40,6 +40,11 @@ libepaper-central is licensed under the MIT License.
 
 ## Changelog
 
+### v0.1.1
+
+* Fix: Added fallback install dirs in CMake configuration ([#1](https://github.com/leso-kn/epaper-central/issues/1))
+* Docs: Added build instructions page
+
 ### v0.1.0
 
 * Initial version of the library

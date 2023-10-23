@@ -6,7 +6,7 @@
 #
 
 cmake_minimum_required(VERSION 3.0)
-project(epaper-central VERSION 0.1.0)
+project(epaper-central VERSION 0.1.1)
 
 # Build Options
 option(EPAPER_CENTRAL_BUILD_EPAPERD "Build daemon reference program" ON)
