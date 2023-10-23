@@ -43,6 +43,18 @@ add_compile_definitions(ECTR_VERSION_PATCH=${PROJECT_VERSION_PATCH})
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/epaper-central.pc.in
     ${CMAKE_CURRENT_BINARY_DIR}/epaper-central.pc @ONLY)
 
+if(NOT CMAKE_INSTALL_INCLUDEDIR)
+    set(CMAKE_INSTALL_INCLUDEDIR include)
+endif()
+
+if(NOT CMAKE_INSTALL_LIBDIR)
+    set(CMAKE_INSTALL_LIBDIR lib)
+endif()
+
+if(NOT CMAKE_INSTALL_DATADIR)
+    set(CMAKE_INSTALL_DATADIR share)
+endif()
+
 if (EPAPER_CENTRAL_BUILD_EPAPERD)
     add_subdirectory(epaperd)
 endif()
@@ -75,6 +87,6 @@ add_custom_target(doc_doxygen ALL
 
 install(
     DIRECTORY docs/man
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/share)
+    DESTINATION ${CMAKE_INSTALL_DATADIR})
 
 endif (DOXYGEN_FOUND)
