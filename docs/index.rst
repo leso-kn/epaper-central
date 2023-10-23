@@ -4,6 +4,7 @@ Home
 .. toctree::
 
     api
+    building
 
 .. toctree::
     :caption: Examples
