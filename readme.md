@@ -8,7 +8,7 @@ _A lightweight image sender library for ZigBee USB sticks running the cc2531-OEP
 
 This C library acts as a serial-driver for CC2531-based ZigBee USB sticks. It can be used to transmit bi-color images to hacked supermarket price-tags via the [OpenEPaperLink](https://openepaperlink.de/) protocol (tested with OpenEPaperLink v1.9.0).
 
-The data-source are generic rgb pixel-arrays, which could be fully generated in memory, with no need for intermediate files.
+The data-source are generic rgb pixel-arrays, which could be fully generated in memory with no need for intermediate files.
 
 ## API
 

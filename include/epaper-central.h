@@ -17,7 +17,7 @@
 #define ECTR_POLL_TRANSFER_COMPLETE 4
 
 /**
- * Struct representing a black-and-red pixmap for EPaper tags.
+ * Struct holding a black-and-red pixmap for EPaper tags.
  * 
  * Pixmaps can be created using the `ectr_pixmap_from_*` methods.
  */

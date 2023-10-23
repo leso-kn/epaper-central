@@ -8,10 +8,10 @@ The *epaperd* reference-program will will pick up `PPM images (P6) <https://en.w
 
 Image filenames are expected to be tag mac addresses (e.g. 00112233aabbccdd.ppm for a tag with mac address ``00:11:22:33:aa:bb:cc:dd``) with a fallback to ``default.ppm`` in case no specific image file exists for a tag – in this case the mac address will be visible on the display in addition until an applicable .ppm-file becomes available in the cache folder.
 
-``epaperd``s code provides a basic overview over the way-of-working with libepaper-central, the main snippet can be seen here:
+``epaperd``\s code provides a basic overview over the way-of-working with libepaper-central, the main snippet can be seen here:
 
 epaperd.c
-**************
+*********
 
 .. literalinclude:: ../epaperd/epaperd.c
     :language: c
