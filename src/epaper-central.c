@@ -177,7 +177,7 @@ int ectr_init(const char *dev)
     _ectr_fd = open(dev, O_RDWR | O_NOCTTY);
     if (_ectr_fd < 0)
     {
-        _ectr_error("error: could not open %s\n", dev);
+        _ectr_error("could not open %s", dev);
         return 1;
     }
 
@@ -185,7 +185,7 @@ int ectr_init(const char *dev)
     struct termios tty;
     memset (&tty, 0, sizeof tty);
     if (tcgetattr(_ectr_fd, &tty)) {
-        _ectr_error("error: could not get serial tty parameters (code %i: %s)\n", errno, strerror(errno));
+        _ectr_error("could not get serial tty parameters (code %i: %s)", errno, strerror(errno));
         return 1;
     }
 
@@ -203,7 +203,7 @@ int ectr_init(const char *dev)
 
     tcflush(_ectr_fd, TCIFLUSH);
     if (tcsetattr(_ectr_fd, TCSANOW, &tty)) {
-        _ectr_error("error: could not set serial tty parameters (code %i: %s\n", errno, strerror(errno));
+        _ectr_error("could not set serial tty parameters (code %i: %s)", errno, strerror(errno));
         return 1;
     }
 

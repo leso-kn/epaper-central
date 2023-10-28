@@ -73,7 +73,11 @@ int main(int argc, char const *argv[])
     default_image = load_ppm(EPAPERD_DATA_DIR"/default.ppm");
     ectr_pixmap_for_tag_callback = &pixmap_for_tag;
 
-    ectr_init("/dev/ttyACM0");
+    if (ectr_init("/dev/ttyACM0"))
+    {
+        printf("error: %s\n", ectr_error);
+        exit(1);
+    }
 
     while (1)
     {
