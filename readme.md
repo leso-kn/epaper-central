@@ -40,6 +40,13 @@ libepaper-central is licensed under the MIT License.
 
 ## Changelog
 
+### v0.2.0
+
+* Pixmap format optimizations (Improved refresh speed)
+* epaperd: Added command line option "`-D`" to specify ZigBee radio device
+* epaperd: Display error message if serial device cannot be opened
+* Fix: Fixed minor offset between black and red pixels
+
 ### v0.1.1
 
 * Fix: Added fallback install dirs in CMake configuration ([#1](https://github.com/leso-kn/epaper-central/issues/1))
