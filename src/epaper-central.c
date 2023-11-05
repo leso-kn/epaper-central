@@ -271,7 +271,7 @@ struct EctrPixmap *ectr_pixmap_from_rgb(unsigned char *rgb, unsigned int length,
     pixmap->pixels = malloc(pixmap->len);
 
     for (unsigned char color = 0; color < 2; color++)
-        for (unsigned int x = w-1; x > 0; x--)
+        for (unsigned int x = w; x > 0; x--)
             for (unsigned int y = 0; y < h; y++)
             {
                 r = rgb[(y * w + x) * 3];
@@ -279,9 +279,8 @@ struct EctrPixmap *ectr_pixmap_from_rgb(unsigned char *rgb, unsigned int length,
                 b = rgb[(y * w + x) * 3+2];
 
                 bitarray[7-bitptr] =
-                    color
-                    ? (/*red*/   r > 127 && g + b < 127*2)
-                    : (/*black*/ r + g + b < 127*3);
+                    /*red*/   r > 127 && g + b < 127*2  ? color : !color &&
+                    /*black*/ r + g + b < 127*3;
                 bitptr++;
                 if (bitptr>=8)
                 {
